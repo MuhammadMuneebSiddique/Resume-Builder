@@ -1727,3 +1727,10 @@ header div a{
         font-size: 4px;
     }
 }
+
+@media print {
+    body {
+      -webkit-print-color-adjust: exact; /* Ensures Chrome and Safari print colors */
+      print-color-adjust: exact; /* Ensures Firefox prints colors */
+    }
+  }
