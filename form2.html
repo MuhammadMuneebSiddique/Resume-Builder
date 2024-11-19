@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./form2.css">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+</head>
+<body>
+    <header>
+        <div>
+            <a href="./index.html">Resume Builder</a>
+        </div>
+        <div class="nav-bar">
+            <ul>
+                <li><a href="./index.html">home</a></li>
+                <li><a href="./index.html#about">About</a></li>
+                <li><a href="./form2.html">Create Resume</a></li>
+                <li><a href="./contact-us.html">Contact us</a></li>
+            </ul>
+        </div>
+        <div class="mobile">
+            <div>
+                <i class="ri-menu-3-line" id="menu"></i>
+                <i class="ri-close-line" id="close"></i>
+            </div>
+            <div class="mobile_nav_bar" id="mobile_nav_bar">
+                <a href="./index.html">home</a>
+                <a href="./index.html#about">About</a>
+                <a href="./form.html">Create Resume</a>
+                <a href="./contact-us.html">Contact us</a>
+            </div>
+        </div>
+    </header>
+    <section class="form" id="form">
+        <!-- ========== ABOUT SECTION ========== -->
+        <div class="about-section">
+            <h2>about section</h2>
+            <div class="first-last">
+                <!-- FIRST NAME -->
+                <div>
+                    <label for="">first name</label><br>
+                    <input type="text" id="firstname_form" placeholder="Enter here"/>
+                </div>    
+                <!-- LAST NAME --> 
+                <div>
+                    <label for="">last name</label><br>
+                    <input type="text" id="lastname_form" placeholder="Enter here">
+                </div>
+            </div>
+            <div class="email-image">
+                <!-- EMAIL -->
+                <div>
+                    <label for="email">email</label><br>
+                    <input type="email" id="email_form"  placeholder="Enter here">
+                </div>
+                <!-- IMAGE -->
+                <div>
+                    <label for="image">Choose image</label><br>
+                    <input type="file" id="image_form" placeholder="Enter here">
+                </div>
+            </div>
+            <div class="address-phone">
+                <!-- ADDRESS -->
+                <div>
+                    <label for="address">address</label><br>
+                    <input type="text" id="address_form"  placeholder="Enter here"> 
+                </div>
+                <!-- PHONE NO -->
+                <div>     
+                    <label for="phoneno">phone no</label><br>
+                    <input type="number"  id="phone_form" placeholder="Enter here">
+                </div>
+            </div>
+            <div class="designation">
+                <div>
+                    <label for="">designation</label><br>
+                    <input type="text" id="designation_form" placeholder="Enter here">
+                </div>
+                <div class="language" id="language">
+                    <div class="language-item">
+                        <div>
+                            <label for="">languages</label><br>
+                            <input type="text" id="languages_form" placeholder="Enter here">
+                        </div>
+                        <button id="language_btn">+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ========== OBJECTIVE SECTION ========== -->
+        <div class="objective-section">
+            <h2>objective</h2>
+            <div>
+                <label for="objective_form">objective</label><br>
+                <textarea name="objective" id="objective_form"  rows="4" placeholder="Enter here"></textarea>
+            </div>
+        </div>
+        <!-- ========== ACHIVEEMENT SECTION ========== -->
+        <div class="achievement-section">
+            <h2>achievement section</h2>
+            <div id="achievement-items">
+                <div class="title-description">
+                    <!-- TITTLE -->
+                    <div>
+                        <label for="title">title</label><br>
+                        <input type="text" id="title_form" placeholder="Enter here">
+                    </div>
+                    <!-- DESCRIPTION -->
+                    <div class="description">
+                        <label for="description">description</label><br>
+                        <textarea name="description" id="description_form"  rows="4" placeholder="Enter here"></textarea>
+                    </div>
+                </div>
+            </div>    
+            <div class="achievement-btn2">
+                <button onclick="achievement()">+</button>
+            </div>
+        </div> 
+        <!-- ========== EXPERIENCE SECTION ========== -->
+        <div class="experience-section">    
+            <div class="experience-items">
+                <h2>experience section</h2>
+                <div class="title-company">
+                    <!-- TITTLE -->
+                    <div>
+                        <label for="title">title</label><br>
+                        <input type="text" id="title_form_E"  placeholder="Enter here">
+                    </div>
+                    <!-- COMPANY -->
+                    <div>
+                        <label for="company">company</label><br>
+                        <input type="text" id="company_form"  placeholder="Enter here">
+                    </div>
+                </div>
+                <div class="location-description">
+                    <!-- DESCRIPTION -->
+                    <div>
+                        <label for="description">description</label><br>
+                        <input type="text" id="description_form_E" placeholder="Enter here">
+                    </div>
+                </div>
+                <div class="start-end">
+                    <!-- START DATE -->
+                    <div>
+                        <label for="start-date">start-date</label><br>
+                        <input type="date" id="start_date_form_E"  placeholder="Enter here">
+                    </div>
+                    <!-- END DATE -->
+                    <div class="end-date-F" id="end-date-F">
+                        <label for="end-date">end-date</label><br>
+                        <input type="date" id="end_date_form_E"  placeholder="Enter here">
+                    </div>
+                    <div class="present" id="present">
+                        <label for="">present/Not present</label>
+                        <div class="p-items">
+                            <input type="radio" id="present_form" name="option">
+                            <h6>present</h6>
+                        </div>
+                        <div class="p-items">
+                            <input type="radio" id="not-present_form" name="option">
+                            <h6>not present</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>    
+            <div class="experience-btn2">
+                <button onclick="experience()">+</button>
+            </div>
+        </div>
+        <!-- ========== EDUCATION SECTION ========== -->
+        <div class="education-section">
+            <div class="education-items">
+                <h2>education section</h2>
+                <div class="school-degree">  
+                    <!-- SCHOOL -->
+                    <div>
+                        <label for="school">College/Universty</label><br>
+                        <input type="text" id="school_form" placeholder="Enter here">
+                    </div>
+                    <!-- DEGREE -->
+                    <div>
+                        <label for="degree">degree</label><br>
+                        <input type="text" id="degree_form"  placeholder="Enter here">
+                    </div>
+                </div>
+                <!-- DATE -->
+                <div class="start-end">
+                    <!-- START DATE -->
+                    <div>
+                    <label for="start-date">start-date</label><br>
+                    <input type="date" id="start_date_form_ED" placeholder="Enter here">
+                </div>
+                <!-- END DATE -->
+                <div>
+                    <label for="end-date">end-date</label><br>
+                    <input type="date" id="end_date_form_ED" placeholder="Enter here">
+                </div>
+                </div>
+            </div>    
+            <div class="education-btn2">
+                <button onclick="eduaction()">+</button>
+            </div>
+        </div>
+        <!-- ========== SKILL SECTION ========== -->
+        <div class="skill-section">
+            <div class="skill-items">
+                <h2>skill section</h2>
+                <div>
+                    <label for="skill">skill</label><br>
+                    <input type="text" id="skill_form"  placeholder="Enter here">
+                </div>
+            </div>
+            <div class="skill-btn2">
+                <button onclick="skill()">+</button>
+            </div>
+        </div> 
+    </section>
+    <section class="template" id="template">
+        <div class="items">
+            <div class="left-side">
+                <div class="image-template">
+                    <img src="./image/8541781_at_mail_email_icon.png" id="image_template" alt="image">
+                </div>
+                <div class="contact-template">
+                    <h2> <img src="./image/points.png" alt="icon">contact</h2>
+                    <div>
+                        <img src="./image/8541781_at_mail_email_icon.png" alt="icon">
+                        <h2 id="email_template">mneeb0676@gmail.com</h2>
+                    </div>
+                    <div>
+                        <img src="./image/phone.png" alt="icon">
+                        <h2 id="phone_template">+54344645645343</h2>
+                    </div>
+                    <div>
+                        <img src="./image/locaion.png" alt="icon">
+                        <h2 id="adddress_template">dsfffdsdfdfdfds dsff dfsfs</h2>
+                    </div>
+                </div>
+                <div class="skill-template">
+                    <h2> <img src="./image/points.png" alt="icon"> skills</h2>
+                    <ul>
+                        <li id="skill-item-template">html</li>
+                    </ul>
+                </div>
+                <div class="language-template">
+                    <h2>  <img src="./image/points.png" alt="icon"> languages</h2>
+                    <ul>
+                        <li id="language_template">urdu</li>
+                    </ul>
+                </div>
+                <div class="achievement-template">
+                    <h2><img src="./image/points.png" alt="icon"> achievement</h2>
+                    <div>
+                        <h5 id="title_template">title</h5>
+                        <p id="description_template">description</p>
+                    </div>
+                </div>
+            </div>
+            <div class="right-side">
+                <div class="name-template">
+                    <h2><span id="firstname_template">muhammad</span> <span id="lastname_template">muneeb</span></h2>
+                    <h3 id="designation_template">front developer</h3>
+                </div>
+                <div class="objective-template">
+                    <p id="objective-des">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam deleniti odit optio nobis quaerat accusamus illo delectus excepturi similique vel! Pariatur cum illum quisquam mollitia nisi nam maiores nesciunt magni?</p>
+                </div>
+                <!-- <div class="contact-template">
+                    <div>
+                        <img src="./image/8541781_at_mail_email_icon.png" alt="icon">
+                        <h2>mneeb0676@gmail.com</h2>
+                    </div>
+                    <div>
+                        <img src="./image/phone.png" alt="icon">
+                        <h2>+54344645645343</h2>
+                    </div>
+                    <div>
+                        <img src="./image/locaion.png" alt="icon">
+                        <h2>dsfffdsdfdfdfds dsff dfsfs</h2>
+                    </div>
+                </div> -->
+                <div class="experience-template">
+                    <h2> <img src="./image/points.png" alt="icon"> work experience</h2>
+                    <ul>
+                        <li>
+                            <h3 id="experience-tittle-template">tiitle</h3>
+                            <h5 id="experience-company-template">company</h5>
+                            <div>
+                                <p id="experience-startdate-template">startdate</p>-<p id="experience-enddate-temlate">enddate</p>
+                            </div>
+                            <p id="experience-description-template">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque odio beatae voluptas, esse rem voluptatibus itaque consequuntur officia eos? Consequuntur quidem aspernatur adipisci, facilis alias ratione voluptate voluptatum tenetur voluptatibus.</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="education-template">
+                    <h2> <img src="./image/points.png" alt="icon">education</h2>
+                    <ul>
+                        <li>
+                            <h3 id="degree-template">degreeee</h3>
+                            <h5 id="school-degree">school/colleage</h5>
+                            <div>
+                                <p id="start-date-template-ED">startdate</p>-<p id="end-date-template-ED">enddate</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="btns">
+            <button id="edit-cv">Edit CV</button>
+            <button id="print-cv">Print CV</button>
+        </div>
+    </section>
+    <div class="all-button" id="all_button">
+        <button id="generate-cv" onclick="generateCv()">Generate CV</button>
+    </div>
+    <script src="./form2.js"></script>
+</body>
+</html>

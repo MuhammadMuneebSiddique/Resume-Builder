@@ -1,0 +1,1729 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+h1,h2,h3,h4,h5,p{
+    word-wrap: break-word;
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+    font-size: 10px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    background-color: #106EBE;
+}
+
+/* ========== HEADER ========== */
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem 8rem;
+    background-color: #000000;
+    font-size: 10px;
+    width: 100%;
+}
+
+/* ===== WEBSITE NAME ===== */
+
+header div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+}
+
+header div a{
+    font-size: 3em;
+    font-weight: 500;
+    color: #fff;
+    letter-spacing: 0.2em;
+    text-decoration-line: none;
+}
+
+/* ===== WEBSITE LOGO ===== */
+
+
+/* ===== NAV-BAR ===== */
+
+.nav-bar ul{
+    display: flex;
+    list-style: none;
+    gap: 4em;
+    & li a{
+        text-decoration-line: none;
+        font-size: 1.7em;
+        text-transform: capitalize;
+        font-weight: 300;
+        color: #fff;
+        letter-spacing: 0.1em;
+        position: relative;
+    }
+
+    & li a:hover{
+        color: #e7e5e5;
+
+    }
+
+    & li a:hover::after{
+        content: "";
+        border-bottom: 0.2em solid #e7e5e5;
+        position: absolute;
+        bottom: -20%;
+        left: 0%;
+        width: 100%;
+        animation: line 1s linear;
+    }
+}
+
+.mobile{
+    display: none;
+    /* position: relative; */
+    & #menu{
+        color: #fff;
+        font-size: 3em;
+    }
+    & #close{
+        color: #fff;
+        font-size: 4em;  
+        display: none;
+    }
+}
+
+.mobile_nav_bar{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    position: absolute;
+    background-color: #000;
+    top: 10em;
+    right: 0;
+    width: 50em;
+    height: 100%;
+    z-index: 999;
+    padding: 2em;
+    gap: 5em;
+    display: none;
+    animation: nav_bar 0.5s linear;
+    & a{
+        font-size: 2.5em;
+        text-transform: capitalize;
+    }
+}
+
+@keyframes nav_bar {
+    0%{
+        transform: translateX(200px);
+        opacity: 0;
+    }
+    50%{
+        transform: translateX(100px);
+        opacity: 0.5;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes line {
+    0%{
+        width: 0%;
+        transform: translateX();
+    }
+    100%{
+        width: 100%;
+        transform: translateX(1px);
+    }
+}
+
+
+@media (width < 1400px) {
+    body header{
+        font-size: 9.5px;
+    }
+}
+@media (width < 1300px) {
+    body header{
+        font-size: 9px;
+    }
+}
+@media (width < 1200px) {
+    body header{
+        font-size: 8.5px;
+    }
+}
+@media (width < 1100px) {
+    body header{
+        font-size: 8px;
+    }
+}
+@media (width < 1000px) {
+    body header{
+        font-size: 7.5px;
+    }
+}
+@media (width < 900px) {
+    body header{
+        font-size: 7px;
+    }
+}
+@media (width < 800px) {
+    body header{
+        font-size: 6.5px;
+    }
+}
+@media (width < 700px) {
+    body header{
+        font-size: 6px;
+    }
+}
+@media (width < 600px) {
+    body header{
+        font-size: 5.5px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+        & .nav-bar{
+            display: none;
+        }
+        & .mobile{
+            display: flex;
+        }
+    }
+}
+@media (width < 500px) {
+    body header{
+        font-size: 5px;
+    }
+}
+@media (width < 400px) {
+    body header{
+        font-size: 4.5px;
+    }
+}
+@media (width < 300px) {
+    body header{
+        font-size: 4px;
+    }
+}
+
+
+/* FORM  */
+
+.form{
+    display: block;
+}
+
+/* ABOUT SECTION */
+
+.about-section{
+    font-size: 10px;
+    width: 80rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding: 4rem 6rem;
+    background-color: #E5E5E5;
+    border-radius: 1em;
+    margin: 3rem 0rem;
+    & h2{
+        font-size: 2.2em;
+        text-transform: uppercase;
+        background-color: black;
+        color: #fff;
+        padding: 0.5em;
+        border-radius: 0.3em;
+    }
+}
+
+/* first name and last name */
+
+.first-last{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    & div{
+        width: 50%;
+    }
+    & label{
+        font-size: 2em;
+        text-transform: capitalize;
+    }
+    & input{
+        margin-top: 0.2em;
+        font-size: 1.7em;
+        padding: 0.5em;
+        width: 100%;
+        border-radius: 0.3em;
+        border: 0.1em solid #000;
+    }
+}
+
+/* email and image */
+
+.email-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    & div{
+        width: 50%;
+    }
+    & label{
+        font-size: 2em;
+        text-transform: capitalize;
+    }
+    & input{
+        font-size: 1.7em;
+        margin-top: 0.2em;
+        padding: 0.5em;
+        width: 100%;
+        border-radius: 0.3em;        
+        border: 0.1em solid #000;
+        background-color: #fff;
+    }
+}
+
+/* address and phone no */
+
+.address-phone{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    & div{
+        width: 50%;
+    }
+    & label{
+        font-size: 2em;
+        text-transform: capitalize;
+    }
+    & input{
+        margin-top: 0.2em;
+        font-size: 1.7em;
+        padding: 0.5em;
+        width: 100%;
+        border-radius: 0.3em;
+        border: 0.1em solid #000;
+    }
+}
+
+.designation{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    & div{
+        width: 100%;
+    }
+    & label{
+        font-size: 2em;
+        text-transform: capitalize;
+    }
+    & input{
+        margin-top: 0.2em;
+        font-size: 1.7em;
+        padding: 0.5em;
+        width: 100%;
+        border-radius: 0.3em;
+        border: 0.1em solid #000;
+    }
+    & .language{
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        & .language-item{
+            display: flex;
+            align-items: end;
+            gap: 1em;
+            & button{
+                font-size: 2em;
+                padding: 0.25em 0.5em;
+                background-color: #000;
+                color: #fff;
+                border: 0.1em solid #000;
+                border-radius: 0.3em;
+                text-align: center;
+            }
+        }
+    }
+}
+
+/* ABOUT SECTION RESPONSIVE */
+
+@media (width < 1420px) {
+    .about-section{
+        font-size: 9.5px;
+    }
+}
+@media (width < 1320px) {
+    .about-section{
+        font-size: 9px;
+    }
+}
+@media (width < 1220px) {
+    .about-section{
+        font-size: 8.5px;
+    }
+}
+@media (width < 1120px) {
+    .about-section{
+        font-size: 8px;
+    }
+}
+@media (width < 1020px) {
+    .about-section{
+        font-size: 7.5px;
+    }
+}
+@media (width < 920px) {
+    .about-section{
+        font-size: 7px;
+    }
+}
+@media (width < 820px) {
+    .about-section{
+        font-size: 6.5px;
+    }
+}
+@media (width < 720px) {
+    .about-section{
+        font-size: 6px;
+    }
+}
+@media (width < 620px) {
+    .about-section{
+        font-size: 5.5px;
+        & .first-last{
+            display: flex;
+            flex-direction: column;
+            & div{
+                width: 100%;
+            }
+        }
+        & .email-image{
+            display: flex;
+            flex-direction: column;
+            & div{
+                width: 100%;
+            }
+        }
+        & .address-phone{
+            display: flex;
+            flex-direction: column;
+            & div{
+                width: 100%;
+            }
+        }
+        & .designation{
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}
+@media (width < 520px) {
+    .about-section{
+        width: 350px;
+        font-size: 5px;
+    }
+}
+@media (width < 420px) {
+    .about-section{
+        font-size: 4.5px;
+        width: 300px;
+    }
+}
+
+@media (width < 320px) {
+    .about-section{
+        font-size: 4px;
+        width: 250px;
+    }
+}
+
+/* OBBJECTIVE SECTION */
+
+.objective-section{
+    font-size: 10px;
+    width: 80rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding: 4rem 6rem;
+    background-color: #E5E5E5;
+    border-radius: 1em;
+    margin: 3rem 0rem;
+    & h2{
+        font-size: 2.2em;
+        text-transform: uppercase;
+        background-color: black;
+        color: #fff;
+        padding: 0.5em;
+        border-radius: 0.3em;
+    }
+    & div{
+       width: 100%; 
+    }
+    & label{
+        font-size: 2em;
+        text-transform: capitalize;
+    }
+    & textarea{
+        margin-top: 0.2em;
+        font-size: 1.7em;
+        padding: 0.5em;
+        width: 100%;
+        border-radius: 0.3em;
+        border: 0.1em solid #000;
+    }
+}
+
+/* OBJECTIVE SECTION RESPONSIVE */
+
+@media (width < 1420px) {
+   .objective-section{
+        font-size: 9.5px;
+    }
+}
+@media (width < 1320px) {
+   .objective-section{
+        font-size: 9px;
+    }
+}
+@media (width < 1220px) {
+   .objective-section{
+        font-size: 8.5px;
+    }
+}
+@media (width < 1120px) {
+   .objective-section{
+        font-size: 8px;
+    }
+}
+@media (width < 1020px) {
+   .objective-section{
+        font-size: 7.5px;
+    }
+}
+@media (width < 920px) {
+   .objective-section{
+        font-size: 7px;
+    }
+}
+@media (width < 820px) {
+   .objective-section{
+        font-size: 6.5px;
+    }
+}
+@media (width < 720px) {
+   .objective-section{
+        font-size: 6px;
+    }
+}
+@media (width < 620px) {
+   .objective-section{
+        font-size: 5.5px;
+    }
+}
+@media (width < 520px) {
+   .objective-section{
+        width: 350px;
+        font-size: 5px;
+    }
+}
+@media (width < 420px) {
+   .objective-section{
+        width: 300px;
+        font-size: 4.5px;
+    }
+}
+@media (width < 320px) {
+   .objective-section{
+        font-size: 4px;
+        width: 250px;
+    }
+}
+
+/* ACHIEVEMENT SECTION */
+
+.achievement-section{
+    font-size: 10px;
+    width: 80rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding: 4rem 6rem;
+    background-color: #E5E5E5;
+    border-radius: 1em;
+    margin: 3rem 0rem;
+    & h2{
+        font-size: 2.2em;
+        text-transform: uppercase;
+        background-color: black;
+        color: #fff;
+        padding: 0.5em;
+        border-radius: 0.3em;
+    }
+}
+
+/* title and description */
+
+.title-description{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    & div{
+        width: 100%;
+    }
+    & label{
+        font-size: 2em;
+        text-transform: capitalize;
+    }
+    & input{
+        margin-top: 0.2em;
+        font-size: 1.7em;
+        padding: 0.5em;
+        width: 100%;
+        border-radius: 0.3em;
+        border: 0.1em solid #000;
+    }
+    & textarea{
+        margin-top: 0.2em;
+        font-size: 1.7em;
+        padding: 0.5em;
+        width: 100%;
+        border-radius: 0.3em;
+        border: 0.1em solid #000;
+    }
+    & .achievement-btn1{
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        width: 100%;
+        margin-top: 2em;
+        & button{
+            font-size: 2em;
+            padding: 0.1em 0.5em;
+            background-color: #000;
+            color: #fff;
+            border: 0.1em solid #000;
+            border-radius: 0.3em;
+            text-align: center;
+        }
+    }
+    
+}
+
+.achievement-btn2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 2em;
+    & button{
+        font-size: 2em;
+        padding: 0.1em 0.5em;
+        background-color: #000;
+        color: #fff;
+        border: 0.1em solid #000;
+        border-radius: 0.3em;
+        text-align: center;
+    }
+}
+
+/* ACHIEVEMENT SECTION RESPONSIVE */
+
+@media (width < 1420px) {
+    .achievement-section{
+        font-size: 9.5px;
+    }
+}
+@media (width < 1320px) {
+    .achievement-section{
+        font-size: 9px;
+    }
+}
+@media (width < 1220px) {
+    .achievement-section{
+        font-size: 8.5px;
+    }
+}
+@media (width < 1120px) {
+    .achievement-section{
+        font-size: 8px;
+    }
+}
+@media (width < 1020px) {
+    .achievement-section{
+        font-size: 7.5px;
+    }
+}
+@media (width < 920px) {
+    .achievement-section{
+        font-size: 7px;
+    }
+}
+@media (width < 820px) {
+    .achievement-section{
+        font-size: 6.5px;
+    }
+}
+@media (width < 720px) {
+    .achievement-section{
+        font-size: 6px;
+    }
+}
+@media (width < 620px) {
+    .achievement-section{
+        font-size: 5.5px;
+    }
+}
+@media (width < 520px) {
+    .achievement-section{
+        width: 350px;
+        font-size: 5px;
+    }
+}
+@media (width < 420px) {
+    .achievement-section{
+        font-size: 4.5px;
+        width: 300px;
+    }
+}
+@media (width < 320px) {
+    .achievement-section{
+        font-size: 4px;
+        width: 250px;
+    }
+}
+
+/* EXPERIENCE SECTION */
+
+.experience-section{
+    font-size: 10px;
+    width: 80rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding: 4rem 6rem;
+    background-color: #E5E5E5;
+    border-radius: 1em;
+    margin: 3rem 0rem;
+    & h2{
+        font-size: 2.2em;
+        text-transform: uppercase;
+        background-color: black;
+        color: #fff;
+        padding: 0.5em;
+        border-radius: 0.3em;
+    }
+}
+
+.experience-items{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    width: 100%;
+}
+
+.title-company{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    & div{
+        width: 50%;
+    }
+    & label{
+        font-size: 2em;
+        text-transform: capitalize;
+    }
+    & input{
+        margin-top: 0.2em;
+        font-size: 1.7em;
+        padding: 0.5em;
+        width: 100%;
+        border-radius: 0.3em;
+        border: 0.1em solid #000;
+    }
+}
+
+.location-description{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    & div{
+        width: 100%;
+    }
+    & label{
+        font-size: 2em;
+        text-transform: capitalize;
+    }
+    & input{
+        margin-top: 0.2em;
+        font-size: 1.7em;
+        padding: 0.5em;
+        width: 100%;
+        border-radius: 0.3em;
+        border: 0.1em solid #000;
+    }
+}
+
+.start-end{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    & div{
+        width: 50%;
+    }
+    & label{
+        font-size: 2em;
+        text-transform: capitalize;
+    }
+    & input{
+        margin-top: 0.2em;
+        font-size: 1.7em;
+        padding: 0.5em;
+        width: 100%;
+        border-radius: 0.3em;
+        border: 0.1em solid #000;
+    }
+    & .present{
+        gap: 1em;
+        & input{
+            width: 10%;
+        }
+        & h6{
+            text-transform: capitalize;
+            font-size: 1.6em;
+            font-weight: 400;
+        }
+        & .p-items{
+            display: flex;
+            width: 100%;
+            gap: 1em;
+        }
+    }
+    & #end-date-F{
+        display: none;
+    }
+}
+.experience-btn1{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 100%;
+    margin-top: 2em;
+    & button{
+        font-size: 2em;
+        padding: 0.1em 0.5em;
+        background-color: #000;
+        color: #fff;
+        border: 0.1em solid #000;
+        border-radius: 0.3em;
+        text-align: center;
+    }
+}
+
+.experience-btn2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 2em;
+    & button{
+        font-size: 2em;
+        padding: 0.1em 0.5em;
+        background-color: #000;
+        color: #fff;
+        border: 0.1em solid #000;
+        border-radius: 0.3em;
+        text-align: center;
+    }
+}
+
+/* EXPERIENCE SECTION RESPONSIVE */
+
+@media (width < 1420px) {
+    .experience-section{
+        font-size: 9.5px;
+    }
+}
+@media (width < 1320px) {
+    .experience-section{
+        font-size: 9px;
+    }
+}
+@media (width < 1220px) {
+    .experience-section{
+        font-size: 8.5px;
+    }
+}
+@media (width < 1120px) {
+    .experience-section{
+        font-size: 8px;
+    }
+}
+@media (width < 1020px) {
+    .experience-section{
+        font-size: 7.5px;
+    }
+}
+@media (width < 920px) {
+    .experience-section{
+        font-size: 7px;
+    }
+}
+@media (width < 820px) {
+    .experience-section{
+        font-size: 6.5px;
+    }
+}
+@media (width < 720px) {
+    .experience-section{
+        font-size: 6px;
+    }
+}
+@media (width < 620px) {
+    .experience-section{
+        font-size: 5.5px;
+        & .title-company{
+            display: flex;
+            flex-direction: column;
+            & div{
+                width: 100%;
+            }
+        }
+        & .location-description{
+            display: flex;
+            flex-direction: column;
+            & div{
+                width: 100%;
+            }
+        }
+        & .start-end{
+            display: flex;
+            flex-direction: column;
+            & div{
+                width: 100%;
+            }
+        }
+    }
+}
+@media (width < 520px) {
+    .experience-section{
+        width: 350px;
+        font-size: 5px;
+    }
+}
+@media (width < 420px) {
+    .experience-section{
+        font-size: 4.5px;
+        width: 300px;
+    }
+}
+
+@media (width < 320px) {
+    .experience-section{
+        font-size: 4px;
+        width: 250px;
+    }
+}
+
+/* EDUCATION SECTION */
+
+.education-section{
+    font-size: 10px;
+    width: 80rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding: 4rem 6rem;
+    background-color: #E5E5E5;
+    border-radius: 1em;
+    margin: 3rem 0rem;
+    & h2{
+        font-size: 2.2em;
+        text-transform: uppercase;
+        background-color: black;
+        color: #fff;
+        padding: 0.5em;
+        border-radius: 0.3em;
+    }
+}
+
+.education-items{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    width: 100%;
+}
+
+.school-degree{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    & div{
+        width: 50%;
+    }
+    & label{
+        font-size: 2em;
+        text-transform: capitalize;
+    }
+    & input{
+        margin-top: 0.2em;
+        font-size: 1.7em;
+        padding: 0.5em;
+        width: 100%;
+        border-radius: 0.3em;
+        border: 0.1em solid #000;
+    }
+}
+
+.start-end{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    & div{
+        width: 50%;
+    }
+    & label{
+        font-size: 2em;
+        text-transform: capitalize;
+    }
+    & input{
+        margin-top: 0.2em;
+        font-size: 1.7em;
+        padding: 0.5em;
+        width: 100%;
+        border-radius: 0.3em;
+        border: 0.1em solid #000;
+    }
+}
+
+.education-btn1{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 100%;
+    margin-top: 2em;
+    & button{
+        font-size: 2em;
+        padding: 0.1em 0.5em;
+        background-color: #000;
+        color: #fff;
+        border: 0.1em solid #000;
+        border-radius: 0.3em;
+        text-align: center;
+    }
+}
+
+.education-btn2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 2em;
+    & button{
+        font-size: 2em;
+        padding: 0.1em 0.5em;
+        background-color: #000;
+        color: #fff;
+        border: 0.1em solid #000;
+        border-radius: 0.3em;
+        text-align: center;
+    }
+}
+
+/* EDUCATION SECTION RESPONSIVE */
+
+@media (width < 1420px) {
+    .education-section{
+        font-size: 9.5px;
+    }
+}
+@media (width < 1320px) {
+    .education-section{
+        font-size: 9px;
+    }
+}
+@media (width < 1220px) {
+    .education-section{
+        font-size: 8.5px;
+    }
+}
+@media (width < 1120px) {
+    .education-section{
+        font-size: 8px;
+    }
+}
+@media (width < 1020px) {
+    .education-section{
+        font-size: 7.5px;
+    }
+}
+@media (width < 920px) {
+    .education-section{
+        font-size: 7px;
+    }
+}
+@media (width < 820px) {
+    .education-section{
+        font-size: 6.5px;
+    }
+}
+@media (width < 720px) {
+    .education-section{
+        font-size: 6px;
+    }
+}
+@media (width < 620px) {
+    .education-section{
+        font-size: 5.5px;
+        & .school-degree{
+            display: flex;
+            flex-direction: column;
+            & div{
+                width: 100%;
+            }
+        }
+        & .start-end{
+            display: flex;
+            flex-direction: column;
+            & div{
+                width: 100%;
+            }
+        }
+    }
+}
+@media (width < 520px) {
+    .education-section{
+        width: 350px;
+        font-size: 5px;
+    }
+}
+@media (width < 420px) {
+    .education-section{
+        font-size: 4.5px;
+        width: 300px;
+    }
+}
+
+@media (width < 320px) {
+    .education-section{
+        font-size: 4px;
+        width: 250px;
+    }
+}
+
+/* SKILLS SECTION */
+
+.skill-section{
+    font-size: 10px;
+    width: 80rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding: 4rem 6rem;
+    background-color: #E5E5E5;
+    border-radius: 1em;
+    margin: 3rem 0rem;
+    & h2{
+        font-size: 2.2em;
+        text-transform: uppercase;
+        background-color: black;
+        color: #fff;
+        padding: 0.5em;
+        border-radius: 0.3em;
+    }
+}
+
+.skill-items{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    width: 100%;
+    & div{
+        width: 100%;
+    }
+    & label{
+        font-size: 2em;
+        text-transform: capitalize;
+    }
+    & input{
+        margin-top: 0.2em;
+        font-size: 1.7em;
+        padding: 0.5em;
+        width: 100%;
+        border-radius: 0.3em;
+        border: 0.1em solid #000;
+    }
+}
+
+.skill-btn1{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 100%;
+    margin-top: 2em;
+    & button{
+        font-size: 2em;
+        padding: 0.1em 0.5em;
+        background-color: #000;
+        color: #fff;
+        border: 0.1em solid #000;
+        border-radius: 0.3em;
+        text-align: center;
+    }
+}
+
+.skill-btn2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 2em;
+    & button{
+        font-size: 2em;
+        padding: 0.1em 0.5em;
+        background-color: #000;
+        color: #fff;
+        border: 0.1em solid #000;
+        border-radius: 0.3em;
+        text-align: center;
+    }
+}
+
+/* SKILL SECTION RESPONSIVE */
+
+@media (width < 1420px) {
+    .skill-section{
+        font-size: 9.5px;
+    }
+}
+@media (width < 1320px) {
+    .skill-section{
+        font-size: 9px;
+    }
+}
+@media (width < 1220px) {
+    .skill-section{
+        font-size: 8.5px;
+    }
+}
+@media (width < 1120px) {
+    .skill-section{
+        font-size: 8px;
+    }
+}
+@media (width < 1020px) {
+    .skill-section{
+        font-size: 7.5px;
+    }
+}
+@media (width < 920px) {
+    .skill-section{
+        font-size: 7px;
+    }
+}
+@media (width < 820px) {
+    .skill-section{
+        font-size: 6.5px;
+    }
+}
+@media (width < 720px) {
+    .skill-section{
+        font-size: 6px;
+    }
+}
+@media (width < 620px) {
+    .skill-section{
+        font-size: 5.5px;
+    }
+}
+@media (width < 520px) {
+    .skill-section{
+        width: 350px;
+        font-size: 5px;
+    }
+}
+@media (width < 420px) {
+    .skill-section{
+        font-size: 4.5px;
+        width: 300px;
+    }
+}
+@media (width < 320px) {
+    .skill-section{
+        font-size: 4px;
+        width: 250px;
+    }
+}
+
+
+
+.template{
+    font-size: 10px;
+    display: none;
+    margin-top: 10rem;
+    height: 100%;
+    padding: 1em;
+    & .btns{
+        margin: 4rem 0rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        & a{
+            text-decoration-line: none;
+        }
+        & #edit-cv{
+            font-size: 2.2rem;
+            padding: 0.8rem 2.5rem;
+            font-weight: 600;
+            border-radius: 0.5rem;
+            border: none;
+            display: none;
+            filter: drop-shadow(0px 0px 0px #000000);
+        }
+        & #print-cv{
+            font-size: 2.2rem;
+            padding: 0.8rem 2.5rem;
+            font-weight: 600;
+            border-radius: 0.5rem;
+            border: none;
+            display: none;
+            filter: drop-shadow(0px 0px 1px #000000);
+        }
+    }
+}
+
+.items{
+    display: flex;
+    filter: drop-shadow(0px 0px 0.5em #000000);
+}
+
+.left-side{
+    background-color: #ccc;
+    width: 23em;
+    padding: 1em 0em;
+    border-right: 0.2em solid #000;
+}
+
+
+.image-template{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    & img{
+        width: 13em;
+        height: 13em;
+        border-radius: 50%;
+        background-color: #ccc;
+    }
+}
+
+.contact-template{
+    display: flex;
+    flex-direction: column;
+    gap: 0.8em;
+    margin: 1.5em 1em; 
+    &>h2{
+        font-size: 1.6em;
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+        gap: 0.3em;
+        & img{
+            width: 1em;
+            height: 1em;
+            object-fit: cover;
+        }
+    }
+    & div{
+        display: flex;
+        align-items: center;
+        gap: 1em;
+        margin-left: 0.4em;
+        &>img{
+            width: 1em;
+            height: 1em;
+            object-fit: cover;
+        }
+        &>h2{
+            font-size: 1.2em;
+            font-weight: 400;
+        }
+    }
+}
+
+.skill-template{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    margin:1em;
+    & h2{
+        font-size: 1.6em;
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+        gap: 0.3em;
+        & img{
+            width: 1em;
+            height: 1em;
+            object-fit: cover;
+        }
+    }
+    & ul{
+        margin-left: 2.2em;
+        & li{
+            font-size: 1.3em;
+            text-transform: capitalize;
+            padding: 0.2em;
+        }
+    }
+}
+
+.achievement-template{
+    display: flex;
+    flex-direction: column;
+    margin:1em;
+    gap: 0.5em;
+    & h2{
+        font-size: 1.6em;
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+        gap: 0.3em;
+        & img{
+            width: 1em;
+            height: 1em;
+            object-fit: cover;
+        }
+    }
+    & div{
+        margin-left: 0.5em;
+        & h5{
+            font-size: 1.3em;
+            text-transform: capitalize;
+        }
+        & p{
+            font-size: 1em;
+            font-weight: 400;
+        }
+    }
+}
+
+.language-template{
+    display: flex;
+    flex-direction: column;
+    margin:1em;
+    gap: 1em;
+    & h2{
+        font-size: 1.6em;
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+        gap: 0.3em;
+        & img{
+            width: 1em;
+            height: 1em;
+            object-fit: cover;
+        }
+    }
+    & ul{
+        margin-left: 2.2em;
+        & li{
+            padding: 0.2em;
+            text-transform: capitalize;
+            font-size: 1.3em;
+        }
+    }
+}
+
+.right-side{
+    width: 40em;
+    background-color: #fff;
+    padding: 0.5em 2em;
+    padding-bottom: 2em;
+
+}
+
+.name-template{
+    padding-top: 4em;
+    & h2{
+        font-size: 2.5em;
+        text-transform: capitalize;
+    }
+    & h3{
+        font-size: 2em;
+        text-transform: capitalize;
+        font-weight: 400;
+    }
+}
+
+.objective-template{
+    padding-top: 2em;
+    width: 100%;
+    & p{
+        font-size: 1.3em;
+        font-weight: 300;
+    }
+}
+
+.experience-template{
+    margin-top: 2.5em;
+    & h2{
+        font-size: 1.6em;
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+        gap: 0.3em;
+        & img{
+            width: 1em;
+            height: 1em;
+            object-fit: cover;
+        }
+    }
+    & ul{
+        margin-left: 2em;
+        & li{
+            margin-top: 1em;
+            & h3{
+                font-size: 1.5em;
+                text-transform: capitalize;
+                padding: 0.1em 0em;
+            }
+            & h5{
+                font-size: 1.2em;
+                text-transform: capitalize;
+                font-weight: 600;
+            }
+            & div{
+                display: flex;
+                align-items: center;
+                gap: 1em;
+                & p{
+                    font-size: 1em
+                }
+            }
+            &>p{
+                margin-top: 1em;
+                font-size: 1em;
+            }
+        }
+    }
+}
+
+.education-template{
+    margin-top: 2.5em;
+    & h2{
+        font-size: 1.6em;
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+        gap: 0.3em;
+        & img{
+            width: 1em;
+            height: 1em;
+            object-fit: cover;
+        }
+    }
+    & ul{
+        margin-left: 2em;
+        & li{
+            margin-top: 1em;
+            & h3{
+                font-size: 1.5em;
+                padding: 0.1em 0em;
+                text-transform: capitalize;
+            }
+            & h5{
+                font-size: 1.2em;
+                text-transform: capitalize;
+                font-weight: 600;
+            }
+            & div{
+                display: flex;
+                align-items: center;
+                gap: 1em;
+                & p{
+                    font-size: 1em
+                }
+            }
+            &>p{
+                margin-top: 1em;
+                font-size: 1em;
+            }
+        }
+    }
+}
+
+/* TEMPLATE RESPONSIVE */
+
+@media (width < 1420px) {
+    .template{
+        font-size: 9.5px;
+    }
+}
+@media (width < 1320px) {
+    .template{
+        font-size: 9px;
+    }
+}
+@media (width < 1220px) {
+    .template{
+        font-size: 8.5px;
+    }
+}
+@media (width < 1120px) {
+    .template{
+        font-size: 8px;
+    }
+}
+@media (width < 1020px) {
+    .template{
+        font-size: 7.5px;
+    }
+}
+@media (width < 920px) {
+    .template{
+        font-size: 7px;
+    }
+}
+@media (width < 820px) {
+    .template{
+        font-size: 6.5px;
+    }
+}
+@media (width < 720px) {
+    .template{
+        font-size: 6px;
+    }
+}
+@media (width < 620px) {
+    .template{
+        font-size: 5.5px;
+    }
+}
+@media (width < 520px) {
+    .template{
+        font-size: 5px;
+    }
+}
+@media (width < 420px) {
+    .template{
+        font-size: 4.5px;
+    }
+}
+@media (width < 320px) {
+    .template{
+        font-size: 4px;
+    }
+}
+
+
+.all-button{
+    margin: 4rem 0rem;
+    padding: 0rem 20rem;
+    padding-bottom: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    & #generate-cv{
+        font-size: 2.2rem;
+        padding: 0.8rem 2.5rem;
+        font-weight: 600;
+        border-radius: 0.5rem;
+        border: none;
+    }
+}
+
+/* HTML & BODY RESPONSIVE */
+
+@media (width < 1420px) {
+    html,body{
+        font-size: 9.5px;
+    }
+}
+@media (width < 1320px) {
+    html,body{
+        font-size: 9px;
+    }
+}
+@media (width < 1220px) {
+    html,body{
+        font-size: 8.5px;
+    }
+}
+@media (width < 1120px) {
+    html,body{
+        font-size: 8px;
+    }
+}
+@media (width < 1020px) {
+    html,body{
+        font-size: 7.5px;
+    }
+}
+@media (width < 920px) {
+    html,body{
+        font-size: 7px;
+    }
+}
+@media (width < 820px) {
+    html,body{
+        font-size: 6.5px;
+    }
+}
+@media (width < 720px) {
+    html,body{
+        font-size: 6px;
+    }
+}
+@media (width < 620px) {
+    html,body{
+        font-size: 5.5px;
+    }
+}
+@media (width < 520px) {
+    html,body{
+        font-size: 5px;
+    }
+}
+@media (width < 420px) {
+    html,body{
+        font-size: 4.5px;
+    }
+}
+@media (width < 320px) {
+    html,body{
+        font-size: 4px;
+    }
+}

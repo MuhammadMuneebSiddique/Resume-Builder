@@ -1,0 +1,1057 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth;
+}
+
+
+html,body{
+    width: 100%;
+    height: 100%;
+    font-size: 10px;
+    background-color: #106EBE;
+}
+
+
+/* ========== HEADER ========== */
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10em;
+    padding: 0px 8em;
+    background-color: #000000;
+    font-size: 10px;
+}
+
+/* ===== WEBSITE NAME ===== */
+
+header div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+}
+
+header div a{
+    font-size: 3em;
+    font-weight: 500;
+    color: #fff;
+    letter-spacing: 0.2em;
+    text-decoration-line: none;
+}
+
+/* ===== WEBSITE LOGO ===== */
+
+
+/* ===== NAV-BAR ===== */
+
+.nav-bar ul{
+    display: flex;
+    list-style: none;
+    gap: 4em;
+    & li a{
+        text-decoration-line: none;
+        font-size: 1.7em;
+        text-transform: capitalize;
+        font-weight: 300;
+        color: #fff;
+        letter-spacing: 0.1em;
+        position: relative;
+    }
+
+    & li a:hover{
+        color: #e7e5e5;
+
+    }
+
+    & li a:hover::after{
+        content: "";
+        border-bottom: 0.2em solid #e7e5e5;
+        position: absolute;
+        bottom: -20%;
+        left: 0%;
+        width: 100%;
+        animation: line 1s linear;
+    }
+}
+
+.mobile{
+    display: none;
+    /* position: relative; */
+    & #menu{
+        color: #fff;
+        font-size: 3em;
+    }
+    & #close{
+        color: #fff;
+        font-size: 4em;  
+        display: none;
+    }
+}
+
+.mobile_nav_bar{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    position: absolute;
+    background-color: #000;
+    top: 10em;
+    right: 0;
+    width: 50em;
+    height: 100%;
+    z-index: 999;
+    padding: 2em;
+    gap: 5em;
+    display: none;
+    animation: nav_bar 0.5s linear;
+    & a{
+        font-size: 2.5em;
+        text-transform: capitalize;
+    }
+}
+
+@keyframes nav_bar {
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes line {
+    0%{
+        width: 0%;
+        transform: translateX();
+    }
+    100%{
+        width: 100%;
+        transform: translateX(1px);
+    }
+}
+
+
+@media (width < 1400px) {
+    body header{
+        font-size: 9.5px;
+    }
+}
+@media (width < 1300px) {
+    body header{
+        font-size: 9px;
+    }
+}
+@media (width < 1200px) {
+    body header{
+        font-size: 8.5px;
+    }
+}
+@media (width < 1100px) {
+    body header{
+        font-size: 8px;
+    }
+}
+@media (width < 1000px) {
+    body header{
+        font-size: 7.5px;
+    }
+}
+@media (width < 900px) {
+    body header{
+        font-size: 7px;
+    }
+}
+@media (width < 800px) {
+    body header{
+        font-size: 6.5px;
+    }
+}
+@media (width < 700px) {
+    body header{
+        font-size: 6px;
+    }
+}
+@media (width < 600px) {
+    body header{
+        font-size: 5.5px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+        & .nav-bar{
+            display: none;
+        }
+        & .mobile{
+            display: flex;
+        }
+    }
+}
+@media (width < 500px) {
+    body header{
+        font-size: 5px;
+    }
+}
+@media (width < 400px) {
+    body header{
+        font-size: 4.5px;
+    }
+}
+@media (width < 300px) {
+    body header{
+        font-size: 4px;
+    }
+}
+
+
+/* ========== MAIN ========== */
+
+/* ===== MAIN SECTION-01 ===== */
+
+main .section-01{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* flex-wrap: wrap; */
+    padding: 7rem 8rem;
+    font-size: 10px;
+}
+
+/* ===== LEFT-SIDE ===== */
+
+.left-side{
+    width: 60em;
+    padding: 1em;
+    padding-left: 3em;
+    /* font-size: 10px; */
+    & .image-para{
+        width: 45em;
+        color: #fff;
+        text-align: center;
+        border: 2px solid #000;
+        padding: 0.5em;
+        border-radius: 3em;
+        margin: 1em 0em;
+        & p{
+            font-size: 1.7em;
+            display: inline;
+            padding: 0.5em;
+            font-weight: 400;
+            color: #fff;
+        }
+    }
+
+    & h3{
+        font-size: 4em;
+        margin-top: 1em;
+        color: #000;
+        font-weight: 900;
+        font-family: "Urbanist", sans-serif;
+    }
+
+    & .para{
+        font-size: 1.7em;
+        opacity: 1;
+        font-weight: 200;
+        padding: 1em 0em;
+        color: #fff;
+        word-spacing: 1px;
+        opacity: 0.9;
+    }
+
+    .btn{
+        text-align: center;
+        width: 50em;
+    }
+
+    & button{
+        text-align: center;
+        font-size: 1.6em;
+        padding: 1.2em 2.2em;
+        border-radius: 3em;
+        margin: 0em 2em;
+        margin-top: 4em;
+        color: #fff;
+        background-color: #000;
+        border: 0.1em solid #000;
+    }
+
+    & button:hover{
+        background-color: transparent;
+        border: 0.1em solid #000;
+    }
+}
+
+/* ===== RIGHT-SIDE ===== */
+
+& .right-side{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & img{
+        width: 60em;
+        height: 50em;
+        object-fit: cover;
+        filter: drop-shadow(0px 0px 30px #000000);
+    }
+}
+
+@media (width < 1400px) {
+    body .section-01{
+        font-size: 9.5px;
+    }
+}
+@media (width < 1300px) {
+    body .section-01{
+        font-size: 9px;
+    }
+}
+@media (width < 1200px) {
+    body .section-01{
+        font-size: 8.3px;
+    }
+}
+@media (width < 1100px) {
+    body .section-01{
+        font-size: 7.5px;
+    }
+}
+@media (width < 1000px) {
+    body .section-01{
+        font-size: 6.7px;
+    }
+}
+@media (width < 900px) {
+    body .section-01{
+        font-size: 6px;
+    }
+}
+@media (width < 800px) {
+    body .section-01{
+        font-size: 5.3px;
+    }
+}
+@media (width < 700px) {
+    body .section-01{
+        font-size: 4.5px;
+    }
+}
+@media (width < 650px) {
+    body .section-01{
+        font-size: 4.2px;
+    }
+}
+@media (width < 600px) {
+    body .section-01{
+        font-size: 6px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        & .left-side{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            & h3,p{
+                text-align: center;
+            }
+        }
+    }
+}
+@media (width < 500px) {
+    body .section-01{
+        font-size: 5.5px;
+    }
+}
+@media (width < 400px) {
+    body .section-01{
+        font-size: 5px;
+    }
+}
+@media (width < 300px) {
+    body .section-01{
+        font-size: 4px;
+    }
+}
+
+
+/* ===== MAIN SECTION-02 ===== */
+
+main .section-02{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 8rem;
+    gap: 2rem;
+    font-size: 10px;
+}
+
+/* === LEFT-SIDE === */
+
+.sec-02-left-side{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    flex-wrap: wrap;
+    & .point{
+        border-radius: 2em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 60em;
+        padding: 1.5em;
+        background-color: #e7e5e5;
+        word-spacing: 2px;
+        box-shadow: 0px 0px 13px 1px rgba(0,0,0,0.49);
+        & img{
+            width: 8.9em;
+            height: 8.9em;
+            padding: 0em 1.5em;
+            object-fit: cover;
+        }
+        & h3,p{
+            font-size: 1.7em;
+        }
+    }
+}
+
+/* === RIGHT-SIDE === */
+
+.sec-02-right-side{
+    border-radius: 1.5em;
+    min-width: 20em;
+    max-width: 67em;
+    background-color: #e7e5e5;
+    padding: 2em;
+    box-shadow: 0px 0px 13px 1px rgba(0,0,0,0.49);
+    & p{
+        word-spacing: 0.2em;
+        font-size: 2.1em;
+        width: auto;
+    }
+    & h2{
+        margin: 0.5em 0em;
+        font-size: 3.1em;
+    }
+    & button{
+        font-size: 1.5em;
+        padding: 1em;
+        border-radius: 1em;
+        margin-top: 2em;
+        color: #fff;
+        border: none;
+        background-color: #106EBE;
+    }
+}
+
+@media (width < 1500px) {
+    body .section-02{
+        font-size: 9px;
+    }
+}
+@media (width < 1400px) {
+    body .section-02{
+        font-size: 8px;
+    }
+}
+@media (width < 1300px) {
+    body .section-02{
+        font-size: 7.5px;
+    }
+}
+@media (width < 1200px) {
+    body .section-02{
+        font-size: 7px;
+    }
+}
+@media (width < 1100px) {
+    body .section-02{
+        font-size: 6.3px;
+    }
+}
+@media (width < 1000px) {
+    body .section-02{
+        font-size: 6px;
+    }
+}
+@media (width < 900px) {
+    body .section-02{
+        font-size: 5.5px;
+    }
+}
+@media (width < 800px) {
+    body .section-02{
+        font-size: 4.7px;
+    }
+}
+@media (width < 700px) {
+    body .section-02{
+        font-size: 4.3px;
+    }
+}
+@media (width < 600px) {
+    body .section-02{
+        font-size: 5.5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media (width < 500px) {
+    body .section-02{
+        font-size: 5px;
+    }
+}
+@media (width < 400px) {
+    body .section-02{
+        font-size: 4.3px;
+    }
+}
+@media (width < 350px) {
+    body .section-02{
+        font-size: 4px;
+    }
+}
+@media (width < 300px) {
+    body .section-02{
+        font-size: 3.7px;
+    }
+}
+
+
+/* ===== MAIN SECTION-03 ===== */
+
+/* === LEFT-SIDE === */
+
+main .section-03{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5rem 8rem;
+    font-size: 10px;
+}
+
+.sec-03-left-side{
+    width: 60em;
+    & div{
+        display: flex;
+        align-items: center;
+        gap: 2em;
+    }
+
+    & img{
+        width: 3em;
+        height: 3em;
+    }
+
+    & h2{
+        font-size: 5em;
+        margin-bottom: 1em;
+        padding-left: 1em;
+        font-family: "Urbanist", sans-serif;
+        font-weight: 800;
+    }
+
+    & h5{
+        font-size: 2em;
+        font-weight: 450;
+        margin: 1.1em 0em;
+        color: #ffff;
+    }
+}
+
+/* === RIGHT-SIDE === */
+
+.sec-03-right-side{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & img{
+        /* padding-top: 2em; */
+        width: 65em;
+        height: 65em;
+        filter: drop-shadow(0.5em 0.5em 2.4em #000000);
+    }
+}
+
+@media (width < 1400px) {
+    body .section-03{
+        font-size: 9px;
+    }
+}
+@media (width < 1300px) {
+    body .section-03{
+        font-size: 8px;
+    }
+}
+@media (width < 1200px) {
+    body .section-03{
+        font-size: 7.5px;
+    }
+}
+@media (width < 1100px) {
+    body .section-03{
+        font-size: 7px;
+    }
+}
+@media (width < 1000px) {
+    body .section-03{
+        font-size: 6.5px;
+    }
+}
+@media (width < 900px) {
+    body .section-03{
+        font-size: 6px;
+    }
+}
+@media (width < 800px) {
+    body .section-03{
+        font-size: 5.5px;
+    }
+}
+@media (width < 750px) {
+    body .section-03{
+        font-size: 5.25px;
+    }
+}
+@media (width < 700px) {
+    body .section-03{
+        font-size: 4.5px;
+    }
+}
+@media (width < 650px) {
+    body .section-03{
+        font-size: 4.2px;
+    }
+}
+@media (width < 600px) {
+    body .section-03{
+        font-size: 5.5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2em;
+    }
+}
+@media (width < 500px) {
+    body .section-03{
+        font-size: 5px;
+    }
+}
+@media (width < 400px) {
+    body .section-03{
+        font-size: 4.5px;
+    }
+}
+@media (width < 300px) {
+    body .section-03{
+        font-size: 4px;
+    }
+}
+
+
+/* ===== SECTION-04 ===== */
+
+.section-04{
+    padding: 4rem 8rem;
+    font-size: 10px;
+    & h2{
+        font-size: 5em;
+        text-align: center;
+        padding-bottom: 0.5em;
+
+    }
+    & .para1{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 8em ;
+        & p{
+            font-size: 2em;
+            text-align: center;
+            color: #e7e5e5;
+            max-width: 50em;
+        }
+    }
+    & .container{
+        display: flex;
+        flex-direction: column;
+        gap: 4em;
+        flex-wrap: wrap;
+        & .item{
+            border: 1.5px solid #000;
+            width: 35em;
+            text-align: center;
+            padding: 2em;
+            border-radius: 2em;
+            box-shadow: 0px 0px 10px -1px rgba(0,0,0,0.75);
+            background-color: #e7e5e5;
+            height: 37em;
+            & img{
+                width: 12em;
+                height: 12em;
+            }
+            & h3{
+                font-size: 2em;
+            }
+            & p{
+                font-size: 1.4em;
+                padding: 1em 0em;
+            }
+        }
+    }
+}
+
+.items{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 4em;
+}
+
+@media (width < 1400px) {
+    body .section-04{
+        font-size: 9.5px;
+    }
+}
+@media (width < 1300px) {
+    body .section-04{
+        font-size: 9px;
+    }
+}
+@media (width < 1200px) {
+    body .section-04{
+        font-size: 8.5px;
+    }
+}
+@media (width < 1100px) {
+    body .section-04{
+        font-size: 8px;
+    }
+}
+@media (width < 1000px) {
+    body .section-04{
+        font-size: 7.5px;
+    }
+}
+@media (width < 900px) {
+    body .section-04{
+        font-size: 7px;
+    }
+}
+@media (width < 800px) {
+    body .section-04{
+        font-size: 6.5px;
+    }
+}
+@media (width < 700px) {
+    body .section-04{
+        font-size: 6px;
+    }
+}
+@media (width < 600px) {
+    body .section-04{
+        font-size: 5.5px;
+    }
+}
+@media (width < 500px) {
+    body .section-04{
+        font-size: 5px;
+    }
+}
+@media (width < 400px) {
+    body .section-04{
+        font-size: 4.5px;
+    }
+}
+@media (width < 300px) {
+    body .section-04{
+        font-size: 4px;
+    }
+}
+
+
+
+
+/* ========== FOOTER ========== */
+
+footer{
+    background-color: #000;
+    /* display: flex;
+    justify-content: space-between; */
+    padding: 4rem 6rem;
+    margin-top: 15rem;
+    font-size: 10px;
+    &>p{
+        font-size: 1.5em;
+        padding-top: 2em;
+        padding-left: 2em;
+        color: #fff;
+        text-align: center;
+    }
+
+}
+
+.background{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 3em;
+    border-radius: 0.5em;
+    gap: 2em;
+    /* & h4,p a,p{
+        font-size: 1.5em;
+        color: #fff;
+    } */
+     color: #fff;
+}
+
+.footer-name{
+    width: 40em;
+    display: flex;
+    flex-direction: column;
+    & a{
+        font-size: 2.5em;
+        font-weight: 700;
+        color: #fff;
+        letter-spacing: 0.2em;
+        text-decoration-line: none;
+    }
+    & p{
+        color: #fff;
+        padding-top: 1em;
+        font-size: 1.5em;
+    }
+}
+
+.Privacy{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    & h4{
+        font-size: 1.5em;
+        padding-bottom: 1em;
+    }
+    & div{
+        & p{
+            font-size: 1.5em;
+            & a{
+                text-decoration-line: none;
+                color: #fff;
+            }
+            & a:hover{
+                color: #fff;
+            }    
+        }
+    }
+}
+
+.navigate{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    & h4{
+        font-size: 1.5em;
+        padding-bottom: 1em;
+    }
+    & div{
+        & p{
+            font-size: 1.5em;
+            & a{
+                text-decoration-line: none;
+                color: #fff;
+            }
+            & a:hover{
+                color: #fff;
+            }    
+        }
+    }
+
+}
+
+.contact{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    & h4{
+        font-size: 1.5em;
+        padding-bottom: 1em;
+    }
+    & div{
+        & p{
+            font-size: 1.5em;
+            & a{
+                text-decoration-line: none;
+                color: #fff;
+            }    
+            & a:hover{
+                color: #fff;
+            }
+        }
+    }
+}
+
+
+/* ========== RESPONSIVE ========== */
+
+@media (width < 1400px) {
+    body footer{
+        font-size: 9.5px;
+    }
+}
+@media (width < 1300px) {
+    body footer{
+        font-size: 9px;
+    }
+}
+@media (width < 1200px) {
+    body footer{
+        font-size: 8.5px;
+    }
+}
+@media (width < 1100px) {
+    body footer{
+        font-size: 8px;
+    }
+}
+@media (width < 1000px) {
+    body footer{
+        font-size: 7.5px;
+    }
+}
+@media (width < 900px) {
+    body footer{
+        font-size: 7px;
+    }
+}
+@media (width < 800px) {
+    body footer{
+        font-size: 6.5px;
+    }
+}
+@media (width < 700px) {
+    body footer{
+        font-size: 6px;
+    }
+}
+@media (width < 600px) {
+    body footer{
+        font-size: 5.5px;
+        & .background{
+            display: flex;
+            gap: 30px;
+        }
+    }
+}
+@media (width < 500px) {
+    body footer{
+        font-size: 5px;
+    }
+}
+@media (width < 400px) {
+    body footer{
+        font-size: 5px;
+    }
+}
+@media (width < 300px) {
+    body footer{
+        font-size: 4.5px;
+    }
+}
+
+
+/* ========== RESPONSIVE ========== */
+
+@media (width < 1400px) {
+    html,body {
+        font-size: 9.5px;
+    }
+}
+@media (width < 1300px) {
+    html,body {
+        font-size: 9px;
+    }
+}
+@media (width < 1200px) {
+    html,body {
+        font-size: 8.5px;
+    }
+}
+@media (width < 1100px) {
+    html,body {
+        font-size: 8px;
+    }
+}
+@media (width < 1000px) {
+    html,body {
+        font-size: 7.5px;
+    }
+}
+@media (width < 900px) {
+    html,body {
+        font-size: 7px;
+    }
+}
+@media (width < 800px) {
+    html,body {
+        font-size: 6.5px;
+    }
+}
+@media (width < 700px) {
+    html,body {
+        font-size: 6px;
+    }
+}
+@media (width < 600px) {
+    html,body {
+        font-size: 5.5px;
+    }
+}
+@media (width < 500px) {
+    html,body {
+        font-size: 5px;
+        & span{
+            width: 100%;
+        }
+    }
+}
+@media (width < 400px) {
+    html,body {
+        font-size: 5px;
+    }
+}
+@media (width < 300px) {
+    html,body {
+        font-size: 4.5px;
+    }
+}
+
+
+.section-05{
+    font-size: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5em 0em;
+    & h2{
+        font-size: 4em;
+        text-transform: capitalize;
+    }
+}
